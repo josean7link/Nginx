@@ -1,0 +1,33 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /usr/share/phpmyadmin;
+    index index.php;
+
+    server_name database.josean7link.org;
+
+    access_log /var/log/nginx/phpmyadmin_access.log;
+    error_log /var/log/nginx/phpmyadmin_error.log;
+
+    location / {
+        # try_files $uri $uri/ /index.php;
+        autoindex on;
+    }
+
+    location ~ ^/(doc|sql|setup)/ {
+        deny all;
+    }
+
+    location ~\.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+);
+        try_files $uri $uri/ =404;
+        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SERVER_NAME $http_host;
+        fastcgi_ignore_client_abort on;
+        # include snippets/fastcgi-php.conf;
+    }
+}
