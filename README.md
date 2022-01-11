@@ -29,7 +29,7 @@ jamartinez@josean7link:/opt/jupyterhub/etc$ tree | tail
 │    └── jupyterhub_config.py
 ├── nginx
 │    └── sites-available
-│           └── jupyterhub.josean7link.org
+│        └── jupyterhub.josean7link.org
 └── systemd
-        └── jupyterhub.service
+    └── jupyterhub.service
 ```
