@@ -23,9 +23,8 @@
 
 #### Files to Install LEMP Server Linux Nginx Mariadb PHP.
 ```sh
-sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-dev mariadb-server-10.3 mariadb-client-10.3 php7.4 php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip
+sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-dev mariadb-server-10.3 mariadb-client-10.3 php7.4 php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip python3-dev python3-pip
 ```
-
 
 ### [_JupyterHub Server Configuration_]
 
@@ -58,3 +57,29 @@ echo "Comando para activar el Servidor Jupyterhub"; conda activate jupyterhub; /
 ```sh
 echo "Comando para Parar los procesos del Servidor Jupyterhug"; sudo pkill jupyterhub
 ```
+
+### [Django] & [Rest Framework Apps]
+
+   [Django]: <https://https://docs.djangoproject.com/en/3.2//>
+   [Rest Framework Apps]: <https://https://www.django-rest-framework.org/>
+
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/320px-Django_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/320px-Django_logo.svg.png)
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gunicorn_logo_2010.svg/320px-Gunicorn_logo_2010.svg.png)](https://docs.gunicorn.org/en/stable/index.html)
+
+#### The quickstart guide.
+```sh
+https://docs.djangoproject.com/en/3.2/intro/
+https://www.django-rest-framework.org/tutorial/quickstart/
+```
+> _NOTE_: The project requires _MariaDB_ Server and Client to run, _Nginx_ and _Python3_ with his _pip_ package.
+
+#### The _MariaDB_ database software is now installed, but its configuration is not yet complete.
+```sh
+sudo mariadb -u root -p
+CREATE DATABASE ${database};
+CREATE USER '${username}'@'localhost' IDENTIFIED BY '${password}';
+GRANT ALL PRIVILEGES ON ${database}.* TO '${username}'@'localhost';
+FLUSH PRIVILEGES;
+exit
+```
+> _NOTE_: Be sure to swap out `${database}`, `${username}` and `${password}` with the actual values of your configuration.
