@@ -71,7 +71,6 @@ echo "Comando para Parar los procesos del Servidor Jupyterhug"; sudo pkill jupyt
 https://docs.djangoproject.com/en/3.2/intro/
 https://www.django-rest-framework.org/tutorial/quickstart/
 ```
-> _Note_: The project requires _MariaDB_ Server and Client to run, _Nginx_ and _Python3_ with his _pip_ package.
 
 #### The _MariaDB_ database software is now installed, but its configuration is not yet complete.
 ```sh
