@@ -82,4 +82,45 @@ GRANT ALL PRIVILEGES ON ${database}.* TO '${username}'@'localhost';
 FLUSH PRIVILEGES;
 exit
 ```
-> _NOTE_: Be sure to swap out `${database}`, `${username}` and `${password}` with the actual values of your configuration.
+> _NOTE_: Be sure to swap out `$database`, `$username` and `$password` with the actual values of your configuration.
+
+#### Gunicorn systemd Service File.
+```sh
+(venv)jamartinez@josean7link:/${BASE-DIR}/etc$ tree
+└── systemd
+    └── system
+        ├── gunicorn.service
+        └── gunicorn.socket
+```
+- unicorn.socket file.
+```sh
+[Unit]
+Description=$Project gunicorn socket
+
+[Socket]
+ListenStream=/run/$Project-gunicorn.sock
+
+[Install]
+WantedBy=sockets.target
+```
+- unicorn.service file.
+```sh
+[Unit]
+Description=$Project gunicorn daemon
+Requires=$Project-gunicorn.socket
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/${BASE-DIR}
+ExecStart=${BASE-DIR}/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/$Project-gunicorn.sock \
+          config.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+```
+> _NOTE_: Be sure to swap out `$BASE-DIR` and `$Project` with the actual values of your configuration.
