@@ -23,7 +23,8 @@ sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-
    [_JupyterHub Server Configuration_]: <https://jupyter.org/hub>
 
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/207px-Jupyter_logo.svg.png)](https://jupyter.org/hub)
-> jamartinez@josean7link:/opt/jupyterhub/etc$ tree | tail
+```
+jamartinez@josean7link:/opt/jupyterhub/etc$ tree | tail
 ├── jupyterhub
 │    └── jupyterhub_config.py
 ├── nginx
@@ -31,3 +32,4 @@ sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-
 │           └── jupyterhub.josean7link.org
 └── systemd
         └── jupyterhub.service
+```
