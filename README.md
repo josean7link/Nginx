@@ -82,7 +82,7 @@ GRANT ALL PRIVILEGES ON ${database}.* TO '${username}'@'localhost';
 FLUSH PRIVILEGES;
 exit
 ```
-> _NOTE_: Be sure to swap out `$database`, `$username` and `$password` with the actual values of your configuration.
+> _Note_: Be sure to swap out `$database`, `$username` and `$password` with the actual values of your configuration.
 
 #### Gunicorn systemd Service File.
 ```sh
