@@ -1,11 +1,9 @@
 # Josean7link.org _Personal Server Configuration._
 
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/240px-Linux_Mint_logo_without_wordmark.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/240px-Linux_Mint_logo_without_wordmark.svg.png)
-
-[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MariaDB_colour_logo.svg/320px-MariaDB_colour_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MariaDB_colour_logo.svg/320px-MariaDB_colour_logo.svg.png)
-
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/240px-Python-logo-notext.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/240px-Python-logo-notext.svg.png)
 
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MariaDB_colour_logo.svg/320px-MariaDB_colour_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/MariaDB_colour_logo.svg/320px-MariaDB_colour_logo.svg.png)
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/320px-Conda_logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Conda_logo.svg/320px-Conda_logo.svg.png)
 
 ## _Nginx Configurations Files_
