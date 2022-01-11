@@ -71,7 +71,7 @@ echo "Comando para Parar los procesos del Servidor Jupyterhug"; sudo pkill jupyt
 https://docs.djangoproject.com/en/3.2/intro/
 https://www.django-rest-framework.org/tutorial/quickstart/
 ```
-> _NOTE_: The project requires _MariaDB_ Server and Client to run, _Nginx_ and _Python3_ with his _pip_ package.
+> _Note_: The project requires _MariaDB_ Server and Client to run, _Nginx_ and _Python3_ with his _pip_ package.
 
 #### The _MariaDB_ database software is now installed, but its configuration is not yet complete.
 ```sh
@@ -123,4 +123,4 @@ ExecStart=${BASE-DIR}/venv/bin/gunicorn \
 [Install]
 WantedBy=multi-user.target
 ```
-> _NOTE_: Be sure to swap out `$BASE-DIR` and `$Project` with the actual values of your configuration.
+> _Note_: Be sure to swap out `$BASE-DIR` and `$Project` with the actual values of your configuration.
