@@ -1,0 +1,18 @@
+[Unit]
+Description=pgAdmin4 gunicorn daemon
+Requires=pgadmin.socket
+After=network.target
+
+[Service]
+User=pgadmin
+Group=www-data
+WorkingDirectory=/opt/pgadmin4/venv/lib/python3.8/site-packages/pgadmin4
+ExecStart=/opt/pgadmin4/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/pgadmin.sock \
+          pgAdmin4:app
+
+[Install]
+WantedBy=multi-user.target
+

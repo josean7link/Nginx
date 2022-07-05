@@ -1,0 +1,8 @@
+[Unit]
+Description=pgAdmin4 gunicorn socket
+
+[Socket]
+ListenStream=/run/pgadmin4.sock
+
+[Install]
+WantedBy=sockets.target
