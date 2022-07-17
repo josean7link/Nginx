@@ -66,6 +66,14 @@ echo "Comando para crear carpeta nginx y sites-available";sudo mkdir -p /opt/jup
 echo "Comando para crear carpeta systemd/system";sudo mkdir -p /opt/jupyterhub/etc/systemd/system
 ```
 
+#### Commands to Run Jupyterhub first time.
+```sh
+echo "Configurar 127.0.X.1 jupyterhub.josean7link.org en el archivo /etc/hosts"
+echo "Comando para crear enlace a Nginx";cd /etc/nginx/sites-available/;sudo ln -s /opt/jupyterhub/etc/nginx/sites-available/jupyterhub.conf;cd ../sites-enabled/sudo ln -s ../sites-available/jupyterhub.conf
+echo "Comando para configurar jupyterhub.service";cd /etc/systemd/system/;sudo ln -s /opt/jupyterhub/etc/systemd/system/jupyterhub.service;sudo systemctl daemon-reload;sudo systemctl enable jupyterhub.service;sudo systemctl start jupyterhub.service
+echo "Comando para Revisar configuraciones Nginx y Reinciar el Servicio";sudo nginx -t;sleep 1s;sudo systemctl restart nginx.service;sleep 1s;sudo systemctl status nginx.service;sudo systemctl status jupyterhub.service
+```
+
 #### Commands to Run Jupyterhub and Stop it.
 ```sh
 echo "Comando para activar el Servidor Jupyterhub"; conda activate jupyterhub; /opt/google/chrome/google-chrome --new-window 'http://jupyterhub.josean7link.org/'; jupyterhub &
