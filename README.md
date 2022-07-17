@@ -23,7 +23,9 @@
 
 #### Files to Install LEMP Server Linux Nginx Mariadb PHP.
 ```sh
-sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-dev mariadb-server-10.3 mariadb-client-10.3 php7.4 php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip python3-dev python3-pip
+sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-dev mariadb-server-10.3 mariadb-client-10.3 \
+php7.4 php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql \
+php7.4-opcache php7.4-readline php7.4-xml php7.4-zip python3-dev python3-pip
 ```
 
 ### [_JupyterHub Server Configuration_]
@@ -69,9 +71,12 @@ echo "Comando para crear carpeta systemd/system";sudo mkdir -p /opt/jupyterhub/e
 #### Commands to Run Jupyterhub first time.
 ```sh
 echo "Configurar 127.0.X.1 jupyterhub.josean7link.org en el archivo /etc/hosts"
-echo "Comando para crear enlace a Nginx";cd /etc/nginx/sites-available/;sudo ln -s /opt/jupyterhub/etc/nginx/sites-available/jupyterhub.conf;cd ../sites-enabled/sudo ln -s ../sites-available/jupyterhub.conf
-echo "Comando para configurar jupyterhub.service";cd /etc/systemd/system/;sudo ln -s /opt/jupyterhub/etc/systemd/system/jupyterhub.service;sudo systemctl daemon-reload;sudo systemctl enable jupyterhub.service;sudo systemctl start jupyterhub.service
-echo "Comando para Revisar configuraciones Nginx y Reinciar el Servicio";sudo nginx -t;sleep 1s;sudo systemctl restart nginx.service;sleep 1s;sudo systemctl status nginx.service;sudo systemctl status jupyterhub.service
+echo "Comando para crear enlace a Nginx";cd /etc/nginx/sites-available/;sudo ln -s /opt/jupyterhub/etc/nginx/sites-available/jupyterhub.conf;\
+cd ../sites-enabled/sudo ln -s ../sites-available/jupyterhub.conf
+echo "Comando para configurar jupyterhub.service";cd /etc/systemd/system/;sudo ln -s /opt/jupyterhub/etc/systemd/system/jupyterhub.service;\
+sudo systemctl daemon-reload;sudo systemctl enable jupyterhub.service;sudo systemctl start jupyterhub.service
+echo "Comando para Revisar configuraciones Nginx y Reinciar el Servicio";sudo nginx -t;sleep 1s;sudo systemctl restart nginx.service;\
+sleep 1s;sudo systemctl status nginx.service;sudo systemctl status jupyterhub.service
 ```
 
 #### Commands to Run Jupyterhub and Stop it.
