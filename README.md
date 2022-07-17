@@ -49,6 +49,15 @@ jamartinez@josean7link:/opt/jupyterhub/etc$ tree | tail
 https://github.com/jupyterhub/jupyterhub-the-hard-way/blob/HEAD/docs/installation-guide-hard.md
 ```
 
+#### Commands to config Jupyterhub, edit each file indicated in the previous guide.
+```sh
+echo "Comando para crear carpeta /opt/jupyterhub";cd /opt/;sudo ln -s ~/anaconda3/envs/jupyterhub/ jupyterhub
+echo "Comando para crear carpeta etc/jupyterhub";cd /opt/jupyterhub;sudo mkdir -p /opt/jupyterhub/etc/jupyterhub
+echo "Comando para crear config file";cd /opt/jupyterhub/etc/jupyterhub;sudo /opt/jupyterhub/bin/jupyterhub --generate-config
+echo "Comando para crear carpeta nginx y sites-available";sudo mkdir -p /opt/jupyterhub/etc/nginx/sites-available
+echo "Comando para crear carpeta systemd/system";sudo mkdir -p /opt/jupyterhub/etc/systemd/system
+```
+
 #### Commands to Run Jupyterhub and Stop it.
 ```sh
 echo "Comando para activar el Servidor Jupyterhub"; conda activate jupyterhub; /opt/google/chrome/google-chrome --new-window 'http://jupyterhub.josean7link.org/'; jupyterhub &
