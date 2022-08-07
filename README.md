@@ -25,7 +25,7 @@
 ```sh
 sudo aptitude install nginx default-libmysqlclient-dev build-essential libldap2-dev mariadb-server-10.3 \
 mariadb-client-10.3 php7.4 php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-json \
-php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip python3-dev python3-pip
+php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip python3-dev python3-pip python3-autopep8
 ```
 
 ### [_JupyterHub Server Configuration_]
